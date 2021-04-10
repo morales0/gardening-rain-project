@@ -5,12 +5,16 @@ import styled from 'styled-components/macro'
 import './Gardening.css'
 
 const Gardening = () => {
+   //State and variables
    const [query, setQuery] = useState("")
    const [search, setSearch] = useState("off")
    const [data, setData] = useState([])
 
+   // Lifecycle
 
-   const handleSearch = () => {
+   // Methods
+   const handleSearch = (e) => {
+      e.preventDefault()
       setSearch("pending")
       // TODO: query cannot have spaces, must replace with plus signs
       queryCrop(query).then((data) => {
@@ -20,13 +24,14 @@ const Gardening = () => {
       })
    }
 
+   // Render
    return (
       <div>
-         <div>
+         <form onSubmit={(e) => handleSearch(e)}>
             <input type="text" placeholder="Search crops..."
                onChange={(e) => setQuery(e.target.value)} />
-            <button onClick={() => handleSearch()}>Search</button>
-         </div>
+            <button type="submit">Search</button>
+         </form>
          {search === "pending" &&
             <div>
                Looking for {query}...
@@ -35,18 +40,22 @@ const Gardening = () => {
          {search === "found" &&
             <div>
                Found!
-               <div>
-                  {data.map((crop) => {
-                     return <div css={`
-                        padding: 10px;
-                        margin-bottom: 12px;
-                        border-bottom: 1px solid #444;
-                        
-                     `}>
-                        <p>{crop.attributes.binomial_name}</p>
-                        <p>{crop.attributes.common_names}</p>
-                        <p>{crop.attributes.description}</p>
-                     </div>
+               <div key="cropsList">
+                  {data.map((crop, i) => {
+                     return (
+                        <div key={`crop${i}`} css={`
+                           padding: 10px;
+                           margin-bottom: 12px;
+                           border-bottom: 1px solid #444;
+                        `}>
+                           <p>{crop.attributes.binomial_name}</p>
+                           <p>{crop.attributes.common_names}</p>
+                           <p>{crop.attributes.description}</p>
+                           {crop.attributes.main_image_path && 
+                              <img src={crop.attributes.main_image_path} alt="crop" width="300px"/>
+                           }
+                        </div>
+                     )
                   })}
                </div>
          

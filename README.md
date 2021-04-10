@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Our Bitcamp gardening project
+This app is hosted here: https://morales0.github.io/gardening-rain-project/
 
 ## Available Scripts
 

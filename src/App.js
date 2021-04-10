@@ -1,16 +1,45 @@
-import {BrowserRouter as Router} from 'react-router-dom'
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Navbar } from './components';
+import { Gardening } from './pages';
 
 function App() {
-  return (
-    <Router>
-      <Navbar/>
-      
-      <div>
-        Gardening!
-      </div>
-    </Router>
-  );
+
+  /* const getCrop = () => {
+    fetch("https://openfarm.cc/api/v1/crops/?filter=chard")
+      .then((resp) =>{
+        console.log(resp)
+        return resp.json()
+      })
+      .then((data) => {
+        console.log(data)
+      })
+  }
+
+  useEffect(() => {
+    getCrop()
+    return () => {
+      console.log("Cleanup")
+    }
+  }, []) */
+
+	return (
+		<Router>
+			<Navbar />
+
+			<Switch>
+				<Route path="/gardening">
+					<Gardening />
+				</Route>
+        <Route path="/rain">
+					<div>Rain!</div>
+				</Route>
+        <Route path="/user">
+					<div>User!</div>
+				</Route>
+			</Switch>
+		</Router>
+	);
 }
 
 export default App;

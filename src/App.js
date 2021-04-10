@@ -4,7 +4,7 @@ import { Navbar } from './components';
 import { Gardening, Home, MyCrops } from './pages';
 
 function App() {
-
+  list = []
   /* const getCrop = () => {
     fetch("https://openfarm.cc/api/v1/crops/?filter=chard")
       .then((resp) =>{
@@ -41,7 +41,7 @@ function App() {
 					<div>User!</div>
 				</Route>
         <Route path="/mycrops">
-          <MyCrops />
+          <MyCrops listofCrp = {list}/>
 				</Route>
 			</Switch>
 		</Router>

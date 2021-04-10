@@ -26,10 +26,19 @@ const Gardening = () => {
 
    // Render
    return (
-      <div>
-         <form onSubmit={(e) => handleSearch(e)}>
+      <div css={`padding: 24px 20px; overflow-y: auto;`}>
+         <form onSubmit={(e) => handleSearch(e)}
+            css={`
+               display: flex;
+               align-items: stretch;
+            `}   
+         >
             <input type="text" placeholder="Search crops..."
-               onChange={(e) => setQuery(e.target.value)} />
+               onChange={(e) => setQuery(e.target.value)} 
+               css={`
+                  padding: 5px 8px;
+               `}
+               />
             <button type="submit">Search</button>
          </form>
          {search === "pending" &&

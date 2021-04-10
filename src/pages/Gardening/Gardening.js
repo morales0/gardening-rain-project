@@ -3,6 +3,7 @@ import { queryCrop } from '../../services/openFarmApi'
 
 import styled from 'styled-components/macro'
 import './Gardening.css'
+import { CropItem } from '../../components'
 
 const Gardening = () => {
    //State and variables
@@ -40,32 +41,30 @@ const Gardening = () => {
                `}
                />
             <button type="submit">Search</button>
+
+            {search === "pending" &&
+               <div>
+                  Looking for {query}...
+               </div>
+            }
+            {search === "found" &&
+               <div>
+                  Found!
+               </div>
+            } 
          </form>
-         {search === "pending" &&
-            <div>
-               Looking for {query}...
-            </div>
-         } 
+         
          {search === "found" &&
             <div>
-               Found!
+               {/* TODO: Make into separate component */}
                <div key="cropsList">
-                  {data.map((crop, i) => {
-                     return (
-                        <div key={`crop${i}`} css={`
-                           padding: 10px;
-                           margin-bottom: 12px;
-                           border-bottom: 1px solid #444;
-                        `}>
-                           <p>{crop.attributes.binomial_name}</p>
-                           <p>{crop.attributes.common_names}</p>
-                           <p>{crop.attributes.description}</p>
-                           {crop.attributes.main_image_path && 
-                              <img src={crop.attributes.main_image_path} alt="crop" width="300px"/>
-                           }
-                        </div>
-                     )
-                  })}
+                  {data.map((crop, i) => 
+                     <CropItem key = {`cropItem${i}`} 
+                        name = {crop.attributes.name}
+                        description = {crop.attributes.description}
+                        imgSrc = {crop.attributes.main_image_path}
+                     />
+                  )}
                </div>
          
             </div>

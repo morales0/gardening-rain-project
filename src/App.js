@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Navbar } from './components';
-import { Gardening } from './pages';
+import { Gardening, Home } from './pages';
 
 function App() {
 
@@ -28,6 +28,9 @@ function App() {
 			<Navbar />
 
 			<Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
 				<Route path="/gardening">
 					<Gardening />
 				</Route>

@@ -10,7 +10,10 @@ export const Navbar = () => {
 
          <ul className="navList">
             <li>
-               <Link to="/gardening">Garden Stuff</Link>
+               <Link to="/gardening">Crops</Link>
+            </li>
+            <li>
+               <Link to="/gardening">Quiz</Link>
             </li>
             <li>
                <Link to="/rain">Rain</Link>

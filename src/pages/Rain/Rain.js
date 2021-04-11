@@ -15,12 +15,12 @@ const Rain = () => {
       let tmp1 = prec*2
       
       setCalculated("true")
-      if(prec == ""){
+      if(prec === ""){
          setCalculated("error")
       } else {
-         if(rArea != ""){
+         if(rArea !== ""){
             setRainfall(rArea*prec)
-         } else if (rWidth != "" && rLength != "") {
+         } else if (rWidth !== "" && rLength !== "") {
             setRainfall(rWidth*rLength*prec)
          } else {
             setCalculated("error")

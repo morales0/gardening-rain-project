@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Navbar } from './components';
-import { Gardening, Home, Quiz, MyCrops } from './pages';
+import { Gardening, Home, Quiz, MyCrops, Rain } from './pages';
 
 function App() {
   const [list, setList] = useState([])
@@ -35,7 +35,7 @@ function App() {
 					<Gardening />
 				</Route>
         <Route path="/rain">
-					<div>Rain!</div>
+        <Rain />
 				</Route>
         <Route path="/user">
 					<div>User!</div>

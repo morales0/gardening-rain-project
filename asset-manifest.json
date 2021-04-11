@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/gardening-rain-project/static/css/main.882e0ba1.chunk.css",
-    "main.js": "/gardening-rain-project/static/js/main.6fc4a6d3.chunk.js",
-    "main.js.map": "/gardening-rain-project/static/js/main.6fc4a6d3.chunk.js.map",
+    "main.css": "/gardening-rain-project/static/css/main.5d8b4195.chunk.css",
+    "main.js": "/gardening-rain-project/static/js/main.ed2b0b82.chunk.js",
+    "main.js.map": "/gardening-rain-project/static/js/main.ed2b0b82.chunk.js.map",
     "runtime-main.js": "/gardening-rain-project/static/js/runtime-main.f72bf505.js",
     "runtime-main.js.map": "/gardening-rain-project/static/js/runtime-main.f72bf505.js.map",
     "static/js/2.85eaef1c.chunk.js": "/gardening-rain-project/static/js/2.85eaef1c.chunk.js",
     "static/js/2.85eaef1c.chunk.js.map": "/gardening-rain-project/static/js/2.85eaef1c.chunk.js.map",
     "index.html": "/gardening-rain-project/index.html",
-    "static/css/main.882e0ba1.chunk.css.map": "/gardening-rain-project/static/css/main.882e0ba1.chunk.css.map",
+    "static/css/main.5d8b4195.chunk.css.map": "/gardening-rain-project/static/css/main.5d8b4195.chunk.css.map",
     "static/js/2.85eaef1c.chunk.js.LICENSE.txt": "/gardening-rain-project/static/js/2.85eaef1c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f72bf505.js",
     "static/js/2.85eaef1c.chunk.js",
-    "static/css/main.882e0ba1.chunk.css",
-    "static/js/main.6fc4a6d3.chunk.js"
+    "static/css/main.5d8b4195.chunk.css",
+    "static/js/main.ed2b0b82.chunk.js"
   ]
 }

@@ -1,0 +1,15 @@
+.Quiz {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 5px;
+}
+
+.QuizBox {
+	display: flex;
+	flex-direction: column;
+   width: 80%;
+	padding: 10px;
+}
+
+/* Answer List */

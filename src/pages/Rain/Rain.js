@@ -39,7 +39,7 @@ const Rain = () => {
       <b>Roof Rain Water Calculator
       </b>
     </div>
-    <p class="paragraph" id="iorj">Why does rain water mater so much? What are the benefits of it?
+    <p class="paragraph" id="iorj">Using a rain water collection system is an great way to have a positive impact on your enviroment! When you collect rainwater, you can put it to use in all sorts of ways. By using it for things like gardening, you reduce your draw from water utilities, saving energy and money along the way! Additionally, runoff is a huge enviromental concern in our ever more urban enviroments. By collecting water during rainstorms you can help reduce runoff that would otherwise be caused by your roof. If you want to learn more about the enviromental impacts of runoff click <a href="https://www.cbf.org/issues/polluted-runoff/index.html#:~:text=Urban%20and%20suburban%20stormwater%20runoff,Soil%20and%20sediment">here!</a> This calculator is a tool you can use to help estimate how much water your roof could produce in a year!
     </p>
     <div class="row" id="izzc">
       <div class="cell" id="i5abt">

@@ -24,21 +24,21 @@ function App() {
   }, []) */
 
 	return (
-		<Router>
+		<Router basename={process.env.PUBLIC_URL}>
 			<Navbar />
 
 			<Switch>
         <Route exact path="/">
-          <Home />
+          <Gardening />
         </Route>
-				<Route path="/gardening">
+				<Route path="/crops">
 					<Gardening />
 				</Route>
         <Route path="/rain">
         <Rain />
 				</Route>
         <Route path="/user">
-					<div>User!</div>
+					<div>{process.env.PUBLIC_URL}!</div>
 				</Route>
         <Route path="/quiz">
 					<Quiz />

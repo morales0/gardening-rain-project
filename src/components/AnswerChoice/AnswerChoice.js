@@ -21,7 +21,7 @@ const CorrectAnswerChoice = (props) => {
 
    return (
       <li className="answerChoice correctAnswerChoice" onClick={() => onSelect()} css={`
-         ${props.questionAnswered ? 'background-color: #7ae47a;' : ''}
+         ${props.questionAnswered ? 'background-color: #b8ffb8;' : ''}
          &:hover {
             ${!selected && !props.questionAnswered ? 'background-color: #ddebc5;' : ''}
          }
@@ -59,7 +59,7 @@ const IncorrectAnswerChoice = (props) => {
 
    return (
       <li className="answerChoice" onClick={() => onSelect()} css={`
-         ${selected ? 'background-color: red;' : ''}
+         ${selected ? 'background-color: #ffa3a3;' : ''}
          &:hover {
             ${!selected && !props.questionAnswered ? 'background-color: #ddebc5;' : ''}
          }

@@ -22,6 +22,9 @@ const QuizQuestion = ({ question, questionInd, handleSelect, questionAnswered })
 	return (
 		<div className="quizQuestion">
          <div>
+				<p>
+					{question.background}
+				</p>
 			   <h2 className="quizQuestionHeader">{question.q}</h2>
          </div>
 			<ul className="answerChoiceList">

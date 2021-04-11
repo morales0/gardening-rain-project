@@ -4,6 +4,7 @@ import './Quiz.css'
 import styled from 'styled-components/macro'
 import { QuizQuestion } from '../../components'
 import questions from '../../data/questions'
+import { Link } from 'react-router-dom'
 
 const Quiz = () => {
    const [score, setScore] = useState(0)
@@ -45,9 +46,7 @@ const Quiz = () => {
                <div>Score: {score}</div>
             </div>
             <QuizQuestion question={question} questionInd={questionIndex} handleSelect={handleSelect} questionAnswered={questionAnswered}/>
-            {
-               questionAnswered &&
-               <div css={`
+            <div css={`
                   display: flex;
                   justify-content: space-between;
                   margin-top:6px;
@@ -65,10 +64,12 @@ const Quiz = () => {
                      color: white;
                   }
                `}>
-                  <div>{questionIndex !== 0 && <button onClick={() => handlePrev()}>Previous</button>}</div>
-                  <div>{questionIndex !== questions.length - 1 && <button onClick={() => handleNext()}>Next</button>}</div>
-               </div>
-            }
+                  {/* <div>{questionIndex !== 0 && <button onClick={() => handlePrev()}>Previous</button>}</div> */}
+                  <Link as="button" to="/crops">Look for Crops</Link>
+                  <div>{questionIndex !== questions.length - 1 && questionAnswered && 
+                     <button onClick={() => handleNext()}>Next</button>}
+                  </div>
+            </div>
          </div>
       </div>
    )
